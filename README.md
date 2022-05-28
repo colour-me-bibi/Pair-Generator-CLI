@@ -12,16 +12,16 @@ git clone https://github.com/colour-me-bibi/Pair-Generator-CLI.git
 
 ```bash
 # known input file to stdout
-python3 pair-gen.py names.txt
+python3 pair_gen.py names.txt
 
 # known input file to known output file
-python3 pair-gen.py names.txt -o output.txt
+python3 pair_gen.py names.txt -o output.txt
 
 # stdin to stdout
-cat names.txt | python3 pair-gen.py
+cat names.txt | python3 pair_gen.py
 
 # stdin to known output file
-cat names.txt | python3 pair-gen.py -o output.txt
+cat names.txt | python3 pair_gen.py -o output.txt
 ```
 
 ## Example Command Line Output
@@ -43,7 +43,7 @@ cat names.txt | python3 pair-gen.py -o output.txt
 ## Python Module Usage
 
 ```python
-from pair-gen import generate_pairs
+from pair_gen import generate_pairs
 
 pairing_sets = generate_pairs(["sally", "bob", "jane"])
 
