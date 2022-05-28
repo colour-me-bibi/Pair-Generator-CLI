@@ -177,7 +177,7 @@ def main():
         args.outfile.write(header.rjust(padding_len + len(header) // 2 + 2))
 
         for a, b in pairing_set:
-            args.outfile.write(f"{a.rjust(padding_len)} - {b}\n")
+            args.outfile.write(f"{str(a).rjust(padding_len)} - {b}\n")
 
         # add a newline between each pairing set
         args.outfile.write("\n" * (i != len(items) - 1))
