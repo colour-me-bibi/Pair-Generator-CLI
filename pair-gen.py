@@ -38,6 +38,9 @@ Output file format:
         sally - None
         jane - sally
 
+Todo:
+    - Add unit tests
+    - Add options for output file formatting
 """
 
 import argparse as ap
