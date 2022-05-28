@@ -66,25 +66,6 @@ def split_at_index(arr, index):
     return arr[:index], arr[index:]
 
 
-def rotate(arr, pivot):
-    """
-    This function returns an array rotated around a given pivot.
-
-    Args:
-        arr (list): A list of items to rotate.
-        pivot (int): The index to rotate around.
-
-    Returns:
-        list: A list of items rotated around a given pivot index.
-
-    Example:
-        >>> rotate(["a", "b", "c", "d"], 1)
-        ['b', 'c', 'd', 'a']
-    """
-
-    return arr[pivot:] + arr[:pivot]
-
-
 def generate_rotations(arr):
     """
     This function generates all rotations of an array.
@@ -106,7 +87,7 @@ def generate_rotations(arr):
     """
 
     for pivot in range(len(arr)):
-        yield rotate(arr, pivot)
+        yield arr[pivot:] + arr[:pivot]
 
 
 def generate_pairings(items):
